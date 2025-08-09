@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// mongoose.connect("mongodb://localhost:27017/pintrest_structure");
 const UserSchema = new mongoose.Schema({
   name: { type: String },
   email: { type: String, unique: true, sparse: true },

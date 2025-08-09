@@ -1,7 +1,7 @@
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const GitHubStrategy = require('passport-github2').Strategy;
 const { Passport } = require('passport');
-const User = require('../models/User');
+const User = require('../Models/UserSchema');
 
 module.exports = (passport) => {
     // Continue With Google 
