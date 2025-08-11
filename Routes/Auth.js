@@ -32,14 +32,14 @@ router.get('/register', (req, res) => {
 //Working 
 router.post('/register', async (req, res) => {
     if (!req.body.email && !req.body.password) {
-        return res.status(400).json({ message: 'Email and password required' });
+        return res.status(400).json({ msg: 'Email and password required' });
     }
     if (!isValidEmail(req.body.email)) {
-        return res.status(400).json({ message: 'Email must be Format of abc@gmail.com' });
+        return res.status(400).json({ msg: 'Email must be Format of abc@gmail.com' });
     }
     const { name, email, password } = req.body;
     let existing = await User.findOne({ email: email });
-    if (existing) return res.status(400).json({ message: 'Email already in use' });
+    if (existing) return res.status(400).json({ msg: 'Email already in use' });
 
     const hashed = await bcrypt.hash(password, 6);
     console.log(hashed);
@@ -55,32 +55,32 @@ router.post('/register', async (req, res) => {
 //check remaining 
 router.post('/login', async (req, res) => {
     try {
-        if (!req.body.email && !req.body.password) {
-            // return res.status(400).json({ err: 'Email and password required' });
-            return res.render('login', { err: 'Email and password required' });
+        const { email, password } = req.body || {};
+        if (!email && !password) {
+            return res.status(400).json({ err: 'Email and password required' });
+            // return res.render('login', { err: 'Email and password required' });
         }
-        if (!isValidEmail(req.body.email)) {
-            // return res.status(400).json({ err: 'Email must be Format of abc@gmail.com' });
-            return res.render('login', { err: 'Email must be Format of abc@gmail.com' });
+        if (!isValidEmail(email)) {
+            return res.status(400).json({ err: 'Email must be Format of abc@gmail.com' });
+            // return res.render('login', { err: 'Email must be Format of abc@gmail.com' });
         }
-        const { email, password } = req.body;
-        const user = User.findOne({ email });
-        if (!user && user.password) {
-            // return res.status(400).json({ err: "Password And Email Cant be Null" });
-            return res.render('login', { err: "Password Is Wrong " });
+        const user = await User.findOne({ email });
+        if (!user ) {
+            return res.status(400).json({ err: "User Not Found In Data base" });
+            // return res.render('login', { err: "Password Is Wrong " });
         }
         const ok = await bcrypt.compare(password, user.password);
         if (!ok) {
-            // return res.status(400).json({err:"Password Is Wrong "});
-            return res.render('/login', { err: "Password Is Wrong " });
+            return res.status(400).json({err:"Password Is Wrong "});
+            // return res.render('/login', { err: "Password Is Wrong " });
         }
 
         createTokenandSetCookies(res, user);
-        // return res.status(400).json({msg:'SuccessFull Login'});
-        return res.render('login', { msg: 'SuccessFull Login' });
+        return res.status(400).json({msg:'SuccessFull Login'});
+        // return res.render('login', { msg: 'SuccessFull Login' });
     } catch (err) {
         console.error(err);
-        res.status(500).json({ err: 'Server error' });
+        res.status(500).json({ err: err.message });
     }
 })
 
@@ -100,8 +100,6 @@ router.get('/google/callback',
     }
 );
 
-
-
 // --- GitHub OAuth
 router.get('/github', passport.authenticate('github', { scope: ['user:email'] }));
 router.get('/github/callback',
@@ -111,7 +109,6 @@ router.get('/github/callback',
         res.redirect('/dashboard');
     }
 );
-
 
 module.exports = router;
 
