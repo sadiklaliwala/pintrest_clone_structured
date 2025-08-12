@@ -86,6 +86,8 @@ npm run start
 
 ## 📤 Deployment
 
+Commig Soon 
+
 ### Backend:
 ```
 * Deployed on [Render](https://render.com)
