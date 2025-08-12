@@ -1,0 +1,52 @@
+<% include ./partials/header.ejs%>
+
+<!-- <header>
+      <div>
+      <button type="click" class="logInButton">Log in</button>
+      </div>
+    </header> -->
+
+<div class="b_image ">
+  <main class="mainModalWindow">
+
+    <div class="mainBoxRight">
+      
+      <div class="mainBoxRightTop">
+        <img class="sizing" src="images/pinIcon.svg">
+      </div>
+      
+      <div class="mainBoxRightCenter">
+        
+        <p class="welcome">Welcome to Pintrest</p>
+        <p class="world">The world's catalog of ideas</p>
+
+      </div>
+      <div class="mainBoxRightBottom">
+        <div class="signUpOptions">
+          <form class="signUpform" method="post" action="/login">
+            <input type="text" id="email" class="input_class" placeholder="Enter User name" name="username">
+            <input type="password" id="password" class="input_class" placeholder="Enter password " name="password">
+
+            <button type="click" class="continueButton">Continue</button>
+          </form>
+          <p class="orDivider">OR</p>
+          <div>
+            <button type="click" class="facebookButton">continue with Facebook</button>
+          </div>
+          <div class="termsOfService">
+            <a href="register"> don't have an acoound ? create it here</a> <br>
+            <p class="termsText">Creating and account means that your ok with Pintrest'
+              <br>
+              <a href="https://www.pintrest.com">Terms of Service,</a> <a href="https://www.pintrest.com">Privacy
+                Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+</main>
+
+
+<% include ./partials/footer.ejs%>

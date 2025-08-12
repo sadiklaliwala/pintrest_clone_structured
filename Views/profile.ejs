@@ -1,0 +1,52 @@
+<%- include('partials/header.ejs') %>
+<div class="profile w-full min-h-screen bg-zinc-800 text-white pt-1">
+    <form id="uploadform" hidden method="POST" action="/uploadfile" enctype="multipart/form-data">
+        <input type="file" name="image">
+    </form>
+    <div class="profdets flex flex-col items-center mt-5">
+        <div class="relative">
+
+            <span
+                class="w-10 h-10 bg-zinc-200 top-200   flex justify-center items-center absolute bottem-0 right-0  rounded-full   "
+                id="uploadicons" style="top:5.2rem">
+                <i class=" text-red-800 ri-pencil-fill"></i>
+            </span>
+
+            <div class="w-32 h-32 bg-zinc-200 rounded-full overflow-hidden shadow-md border border-gray-300">
+                <img class="w-full h-full object-cover" src="<%= user?.dp ? '/images/uploads/' + user.dp: '/images/default.png' 
+                %>" alt="<%= user?.name ? user.name + ' profile photo' : 'Default profile photo' %>">
+            </div>
+
+
+        </div>
+        <h1 class="text-3xl font-semibold mt-5">
+            @<%= user.name%>
+        </h1>
+        <a href="/add" class="px-10 py-2 rounded-lg bg-red-700 text-xs font-semibold  mt-3">Add Post </a>
+    </div>
+    <div class="cards flex flex-wrap gap-10 pl-5 mt-5">
+        <% user.posts.forEach(function(i) {%>
+        <div>
+            <div class="w-40 h-32 bg-red-200 rounded-lg overflow-hidden">
+                <img class="w-full h-full object-cover" src="/images/uploads/<%= i.image %>" alt="" srcset="">
+            </div>
+            <h3 class="text-xl font-semibold mt-3"><%= i.title %> </h3>
+            <h5 class="text-sm font-medium "> pins </h5>
+        </div>
+        <% }); %>
+    </div>
+</div>
+<script>
+    const form = document.querySelector("#uploadform input");
+    document.querySelector("#uploadicons").addEventListener("click", function () {
+        console.log("clicked");
+        form.click();
+    });
+    form.addEventListener("change", function (req, res, next) {
+        console.log("changed");
+        document.querySelector("#uploadform").submit();
+    })
+    // console.log(user.posts[0].title)
+
+</script>
+<%- include ('partials/footer.ejs')%>

@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Forest Trail Adventure",
+    "description": "Exploring the lush green forest trail on a sunny day.",
+    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-20T09:00:00Z",
+    "likes": []
+  },
+  {
+    "title": "Vintage Car Show",
+    "description": "Caught this stunning vintage car at the local auto show.",
+    "image": "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-21T14:30:00Z",
+    "likes": ["689b36ad4376b1770fb8a9d4"]
+  },
+  {
+    "title": "Sunrise by the Lake",
+    "description": "A peaceful sunrise with reflections on the lake water.",
+    "image": "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-22T06:15:00Z",
+    "likes": []
+  },
+  {
+    "title": "Street Food Fiesta",
+    "description": "Delicious street food I tried on my recent trip.",
+    "image": "https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-23T13:00:00Z",
+    "likes": ["689b36ad4376b1770fb8a9d4"]
+  },
+  {
+    "title": "Winter Wonderland",
+    "description": "Snow-covered trees and a quiet winter morning.",
+    "image": "https://images.unsplash.com/photo-1486308510493-cb32ea2f3566?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-24T10:30:00Z",
+    "likes": []
+  },
+  {
+    "title": "Street Musician Performing",
+    "description": "Talented street musician playing soulful tunes.",
+    "image": "https://images.unsplash.com/photo-1464375117522-1311f79928d9?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-25T16:45:00Z",
+    "likes": ["689b36ad4376b1770fb8a9d4"]
+  },
+  {
+    "title": "Colorful Hot Air Balloons",
+    "description": "Hot air balloons rising against the blue sky.",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-26T07:20:00Z",
+    "likes": []
+  },
+  {
+    "title": "Coastal Cliff Views",
+    "description": "Breathtaking view of cliffs along the coastline.",
+    "image": "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-27T15:00:00Z",
+    "likes": ["689b36ad4376b1770fb8a9d4"]
+  },
+  {
+    "title": "Urban Architecture",
+    "description": "Modern architectural marvels in the city center.",
+    "image": "https://images.unsplash.com/photo-1468071174046-657d9d351a40?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-28T11:10:00Z",
+    "likes": []
+  },
+  {
+    "title": "Flower Garden in Bloom",
+    "description": "Spring flowers adding color to the garden.",
+    "image": "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-29T09:40:00Z",
+    "likes": []
+  },
+  {
+    "title": "Mountain Biking Trail",
+    "description": "Thrilling ride on a mountain biking trail through the woods.",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-30T17:25:00Z",
+    "likes": ["689b36ad4376b1770fb8a9d4"]
+  }
+]

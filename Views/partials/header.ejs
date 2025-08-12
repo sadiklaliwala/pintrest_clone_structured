@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: none;
+        }
+    </style>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <%if(nav=== true) { %>      
+        <div class=" w-full flex px-10 py-5 justify-between bg-zinc-800 text-white position-relative ">
+            <h3>Pintrest</h3>
+            <div class="flex gap-10 item-center ">
+                <a href="/feed">home</a>
+                <a href="/feed">feed</a>
+                <a href="/profile">Profile</a>
+                <a class="px-2 rounded-lg bg-red-500" href="/auth/logout">Logout</a>
+            </div>
+        </div>
+    <% } %>
+    

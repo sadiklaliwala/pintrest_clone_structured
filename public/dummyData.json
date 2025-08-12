@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Sunset over the Mountains",
+    "description": "Captured this beautiful sunset during my hike last weekend.",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-01T18:30:00Z",
+    "likes": []
+  },
+  {
+    "title": "City Lights at Night",
+    "description": "The city skyline looks magical with all the lights shimmering.",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-05T20:15:00Z",
+    "likes": ["64d3f0b1a89c123456789abe"]
+  },
+  {
+    "title": "Morning Dew on Leaves",
+    "description": "Close-up shot of dew drops on fresh leaves.",
+    "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-10T06:45:00Z",
+    "likes": ["64d3f0b1a89c123456789abc", "64d3f0b1a89c123456789abd"]
+  },
+  {
+    "title": "Cozy Reading Nook",
+    "description": "My favorite spot to relax and read books.",
+    "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-12T14:20:00Z",
+    "likes": []
+  },
+  {
+    "title": "Calm Beach Morning",
+    "description": "Enjoying the serenity of the ocean early in the morning.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-13T07:10:00Z",
+    "likes": ["64d3f0b1a89c123456789abd"]
+  },
+  {
+    "title": "City Park in Autumn",
+    "description": "The park looks stunning with all the golden leaves around.",
+    "image": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-14T10:45:00Z",
+    "likes": []
+  },
+  {
+    "title": "Snowy Mountain Peaks",
+    "description": "The fresh snow makes the mountain peaks look even more majestic.",
+    "image": "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-15T16:30:00Z",
+    "likes": ["64d3f0b1a89c123456789abc", "64d3f0b1a89c123456789abd"]
+  },
+  {
+    "title": "Delicious Homemade Pizza",
+    "description": "Tried a new recipe and it turned out amazing!",
+    "image": "https://images.unsplash.com/photo-1548365328-9a7a922b0d47?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-16T12:00:00Z",
+    "likes": []
+  },
+  {
+    "title": "Night Sky with Stars",
+    "description": "Spent the night stargazing and capturing the Milky Way.",
+    "image": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-17T23:45:00Z",
+    "likes": ["64d3f0b1a89c123456789ac2"]
+  },
+  {
+    "title": "Street Art Vibes",
+    "description": "Amazing graffiti I saw during my city walk.",
+    "image": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-18T15:00:00Z",
+    "likes": ["64d3f0b1a89c123456789ac3", "64d3f0b1a89c123456789ac0"]
+  },
+  {
+    "title": "Freshly Brewed Coffee",
+    "description": "Nothing like the aroma of freshly brewed coffee in the morning.",
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+    "user": "689b36ad4376b1770fb8a9d4",
+    "createdAt": "2025-08-19T08:20:00Z",
+    "likes": []
+  }
+]

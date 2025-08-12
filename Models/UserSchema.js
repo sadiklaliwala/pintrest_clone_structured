@@ -6,8 +6,11 @@ const UserSchema = new mongoose.Schema({
   password: { type: String }, // for local auth
   googleId: { type: String, unique: true, sparse: true },
   githubId: { type: String, unique: true, sparse: true },
+  facebookId: { type: String, unique: true, sparse: true },
   role: { type: String, default: "user" },
   createdAt: { type: Date, default: Date.now },
+  posts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' }],
+  dp: { type: String },
 });
 
 //sparse field is use if it login with github or mormal then it can be Null

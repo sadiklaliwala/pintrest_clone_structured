@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs') %>
+
+<% if (err) { %>
+<p class="error"><%= err %></p>
+<% } %>
+
+<div class="cards flex flex-wrap gap-10 pl-5 mt-5">
+    <% if (posts) { %>
+        <% posts.forEach(function(i) {%>
+        <div>
+            <div class="w-40 h-32 bg-red-200 rounded-lg overflow-hidden">
+                <a href="/images/uploads/<%= i.image %>" download="">
+                <img class="w-full h-full object-cover" src="/images/uploads/<%= i.image %>" alt="" srcset="">
+                </a>
+            </div>
+            <h3 class="text-xl font-semibold mt-3"><%= i.title %> </h3>
+            <h5 class="text-sm font-medium "> @<%= i.user.name %> Posted </h5>
+        </div>
+        <% }); %>
+    <% } %>
+        
+</div>
+<%- include ('partials/footer.ejs') %>
