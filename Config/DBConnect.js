@@ -1,16 +1,15 @@
 const mongoose = require('mongoose');
 
 
-const mongoURI = 'mongodb://localhost:27017/pintrest_structure';  // or your Atlas URI
+const mongoURI = process.env.MONGO_DB_URI ;  // or your Atlas URI
 
-mongoose.connect(mongoURI, {
-    
-});
+mongoose.connect(mongoURI);
 
 const db = mongoose.connection;
 
 db.on('error', (err) => {
     console.error('MongoDB connection error:', err);
+    process.exit(1);
 });
 
 db.once('open', () => {
