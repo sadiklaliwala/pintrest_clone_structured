@@ -29,26 +29,28 @@ function isValidEmail(email) {
 
 
 router.get('/register', (req, res) => {
-    return res.render("register");
+    return res.render("register",{err:null});
 
 })
 
 //Working 
 router.post('/register', async (req, res) => {
     if (!req.body.email && !req.body.password) {
-        return res.status(400).json({ msg: 'Email and password required' });
+        return res.render('register',{err:'Email and password required'})
+        // return res.status(400).json({ msg: 'Email and password required' });
     }
     if (!isValidEmail(req.body.email)) {
-        return res.status(400).json({ msg: 'Email must be Format of abc@gmail.com' });
+        return res.render('register',{err:'Email must be Format of abc@gmail.com'})
+        // return res.status(400).json({ msg: 'Email must be Format of abc@gmail.com' });
     }
-    const { name, email, password } = req.body;
+    const { username, email, password } = req.body;
     let existing = await User.findOne({ email: email });
-    if (existing) return res.status(400).json({ msg: 'Email already in use' });
-
+    if (existing){
+        // return res.status(400).json({ msg: 'Email already in use' });
+        return res.render('register',{err:'Email already in use'})
+    }
     const hashed = await bcrypt.hash(password, 6);
-    // console.log(hashed);
-    const user = await User.create({ name: name, email: email, password: hashed });
-
+    const user = await User.create({ name: username, email: email, password: hashed });
     createTokenandSetCookies(res, user);
     user.save();
     // return res.status(200).json({ msg: 'Registered And Logged In' });

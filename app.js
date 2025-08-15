@@ -9,6 +9,8 @@ const PostRoutes = require('./Routes/Post')
 const passport = require('passport');
 const authMiddleware = require('./MiddleWare/Auth');
 const path = require('path');
+// const session = require("express-session");
+// const flash = require("connect-flash");
 
 // For URL-encoded form data (e.g., from <form method="POST"> without enctype="multipart/form-data")
 app.use(express.urlencoded({ extended: true }));
@@ -23,10 +25,13 @@ app.use(passport.initialize());
 app.set('views', path.join(__dirname, 'Views'));
 app.set('view engine', 'ejs');
 
+// app.use(session({ secret: process.env.SECRET || 'sadik', resave: false, saveUninitialized: true }));
+// app.use(flash());
+
 app.use(cookieParser());
 
-app.get('/', (re1, res) => {
-  res.send("this is Home page")
+app.get('/', (req, res) => {
+  res.redirect('/feed');
 })
 
 // Routes
